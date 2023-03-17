@@ -10,7 +10,6 @@ namespace Automarket.Exceptions
     {
         public ObjectExcistException(string objectName) : base($"{objectName} was found!")
         {
-
         }
     }
 }

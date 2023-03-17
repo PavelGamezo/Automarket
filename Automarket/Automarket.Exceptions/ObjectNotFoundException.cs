@@ -8,9 +8,8 @@ namespace Automarket.Exceptions
 {
     public class ObjectNotFoundException : Exception
     {
-        public ObjectNotExcistException(string objectName) : base($"{objectName} was not found")
+        public ObjectNotFoundException(string objectName) : base($"{objectName} was not found")
         {
-
         }
     }
 }

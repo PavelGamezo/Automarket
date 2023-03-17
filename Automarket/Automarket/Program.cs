@@ -1,7 +1,14 @@
+using Automarket.BusinessLayer.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
+var services = builder.Services;
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+services.AddControllersWithViews();
+// Get connectionSctring for Database
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new ArgumentNullException();
+// DI
+builder.Services.AddBusinessLayer(connectionString);
 
 var app = builder.Build();
 

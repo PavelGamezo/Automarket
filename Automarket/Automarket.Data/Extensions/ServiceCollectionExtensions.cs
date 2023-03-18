@@ -1,5 +1,6 @@
 ﻿using Automarket.Data.Repositories;
 using Automarket.Data.Repositories.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -16,7 +17,7 @@ namespace Automarket.Data.Extensions
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                                                         {
-                                                            options.UseSqlServer(connectionString);
+                                                            options.UseSqlServer(connectionString, b => b.MigrationsAssembly("Automarket"));
                                                         });
             services.AddScoped<ICarRepository, CarRepository>();
             //services.AddScoped<IUserRepository, UserRepository>();

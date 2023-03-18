@@ -53,6 +53,32 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -103,6 +129,9 @@
             "projectReferences": {
               "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket\\Automarket.Entities\\Automarket.Entities.csproj": {
                 "projectPath": "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket\\Automarket.Entities\\Automarket.Entities.csproj"
+              },
+              "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket\\Automarket.Exceptions\\Automarket.Exceptions.csproj": {
+                "projectPath": "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket\\Automarket.Exceptions\\Automarket.Exceptions.csproj"
               }
             }
           }
@@ -125,25 +154,29 @@
               "target": "Package",
               "version": "[12.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[6.0.15, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.15, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[6.0.15, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.13, )"
             }
           },
           "imports": [
@@ -214,25 +247,29 @@
               "target": "Package",
               "version": "[12.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[6.0.15, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.15, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[6.0.15, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.13, )"
             }
           },
           "imports": [
@@ -303,25 +340,29 @@
               "target": "Package",
               "version": "[12.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[6.0.15, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.15, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[6.0.15, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.13, )"
             }
           },
           "imports": [
@@ -374,6 +415,15 @@
             "projectReferences": {
               "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket\\Automarket.BusinessLayer\\Automarket.BusinessLayer.csproj": {
                 "projectPath": "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket\\Automarket.BusinessLayer\\Automarket.BusinessLayer.csproj"
+              },
+              "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket\\Automarket.Data\\Automarket.Data.csproj": {
+                "projectPath": "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket\\Automarket.Data\\Automarket.Data.csproj"
+              },
+              "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket\\Automarket.Entities\\Automarket.Entities.csproj": {
+                "projectPath": "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket\\Automarket.Entities\\Automarket.Entities.csproj"
+              },
+              "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket\\Automarket.Exceptions\\Automarket.Exceptions.csproj": {
+                "projectPath": "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket\\Automarket.Exceptions\\Automarket.Exceptions.csproj"
               }
             }
           }
@@ -396,25 +446,33 @@
               "target": "Package",
               "version": "[12.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.15, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.15, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[6.0.15, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.13, )"
             }
           },
           "imports": [

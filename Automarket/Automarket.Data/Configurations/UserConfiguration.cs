@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Automarket.Data.Configurations
 {
-    public class UserConfiguration : IEntityTypeConfiguration<User>
+    /*public class UserConfiguration : IEntityTypeConfiguration<User>
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
@@ -23,5 +23,5 @@ namespace Automarket.Data.Configurations
                    .IsRequired()
                    .HasMaxLength(200);
         }
-    }
+    }*/
 }

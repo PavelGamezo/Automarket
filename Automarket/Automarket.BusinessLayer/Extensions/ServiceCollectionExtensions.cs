@@ -14,8 +14,6 @@ namespace Automarket.BusinessLayer.Extensions
     {
         public static IServiceCollection AddBusinessLayer(this IServiceCollection service, string connectionSctring)
         {
-            service.AddScoped<IUserService, UserServices>();
-            service.AddScoped<ICarService, CarServices>();
             service.AddDatabase(connectionSctring);
             service.AddAutoMapper(Assembly.GetCallingAssembly(),
                                Assembly.GetExecutingAssembly());

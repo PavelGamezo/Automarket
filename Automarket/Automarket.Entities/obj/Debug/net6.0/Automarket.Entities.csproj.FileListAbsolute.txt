@@ -1,0 +1,14 @@
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket\Automarket.Entities\bin\Debug\net6.0\Automarket.Entities.deps.json
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket\Automarket.Entities\bin\Debug\net6.0\Automarket.Entities.runtimeconfig.json
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket\Automarket.Entities\bin\Debug\net6.0\Automarket.Entities.dll
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket\Automarket.Entities\bin\Debug\net6.0\Automarket.Entities.pdb
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket\Automarket.Entities\obj\Debug\net6.0\Automarket.Entities.csproj.AssemblyReference.cache
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket\Automarket.Entities\obj\Debug\net6.0\Automarket.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket\Automarket.Entities\obj\Debug\net6.0\Automarket.Entities.AssemblyInfoInputs.cache
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket\Automarket.Entities\obj\Debug\net6.0\Automarket.Entities.AssemblyInfo.cs
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket\Automarket.Entities\obj\Debug\net6.0\Automarket.Entities.csproj.CoreCompileInputs.cache
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket\Automarket.Entities\obj\Debug\net6.0\Automarket.Entities.dll
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket\Automarket.Entities\obj\Debug\net6.0\refint\Automarket.Entities.dll
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket\Automarket.Entities\obj\Debug\net6.0\Automarket.Entities.pdb
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket\Automarket.Entities\obj\Debug\net6.0\Automarket.Entities.genruntimeconfig.cache
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket\Automarket.Entities\obj\Debug\net6.0\ref\Automarket.Entities.dll

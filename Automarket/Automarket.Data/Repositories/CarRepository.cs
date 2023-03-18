@@ -1,5 +1,6 @@
 ﻿using Automarket.Data.Repositories.Interfaces;
 using Automarket.Entities.Entities;
+using Automarket.Exceptions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -59,7 +60,9 @@ namespace Automarket.Data.Repositories
 
         public async Task<Car> GetByIdAsync(Guid id)
         {
-            return await _context.Cars.Include(q => q.User).FirstOrDefaultAsync(q => q.CarId == id);
+            return await _context.Cars.Include(q => q.User)
+                                      .FirstOrDefaultAsync(q => q.CarId == id) 
+                                      ?? throw new ObjectNotFoundException("Car");
         }
 
         public Task SaveAsync()

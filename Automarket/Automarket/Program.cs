@@ -1,4 +1,7 @@
 using Automarket.BusinessLayer.Extensions;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Automarket.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +10,8 @@ var services = builder.Services;
 services.AddControllersWithViews();
 // Get connectionSctring for Database
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new ArgumentNullException();
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<ApplicationDbContext>();
 // DI
 builder.Services.AddBusinessLayer(connectionString);
 
@@ -25,7 +30,10 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();;
 app.UseAuthorization();
+
+app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "default",

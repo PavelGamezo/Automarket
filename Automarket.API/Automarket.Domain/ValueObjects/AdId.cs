@@ -8,24 +8,24 @@ using System.Threading.Tasks;
 
 namespace Automarket.Domain.ValueObjects
 {
-    public class CarBrand : ValueObject
+    public class AdId : ValueObject
     {
-        public string Value { get; set; }
+        public Guid Value { get; set; }
 
-        public CarBrand(string value)
+        public AdId(Guid value)
         {
-            if (string.IsNullOrEmpty(value))
+            if (value == Guid.Empty)
             {
-                throw new EmptyCarBrandException();
+                throw new EmptyCarBodyException();
             }
             Value = value;
         }
 
-        public static implicit operator string(CarBrand carBrand) =>
-            carBrand.Value;
+        public static implicit operator Guid(AdId carBody) =>
+            carBody.Value;
 
-        public static implicit operator CarBrand(string carBrand) =>
-            new(carBrand);
+        public static implicit operator AdId(Guid carBody) =>
+            new(carBody);
 
         public override IEnumerable<object> GetEqualityComponents()
         {

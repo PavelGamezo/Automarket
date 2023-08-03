@@ -13,10 +13,10 @@ namespace Automarket.Domain.Entities
     {
         private bool _done;
 
-        public CarBrand Brand { get; private set; }
-        public CarModel Model { get; private set; }
-        public CarBody CarBody { get; private set; }
-        public CarYear Year { get; private set; }
+        public CarBrand Brand { get; set; }
+        public CarModel Model { get; set; }
+        public CarBody CarBody { get; set; }
+        public CarYear Year { get; set; }
         public bool Done
         {
             get => _done;
@@ -29,7 +29,7 @@ namespace Automarket.Domain.Entities
             }
         }
 
-        public Ad(Guid id, CarBrand brand, CarModel model, CarBody carBody, int year) : base(id)
+        public Ad(Guid id, CarBrand brand, CarModel model, CarBody carBody, CarYear year) : base(id)
         {
             Brand = brand;
             Model = model;

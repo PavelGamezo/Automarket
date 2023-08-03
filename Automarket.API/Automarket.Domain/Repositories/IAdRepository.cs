@@ -10,9 +10,11 @@ namespace Automarket.Domain.Repositories
 {
     public interface IAdRepository
     {
-        Task<Ad> GetAsync(AdId id);
-        Task<Ad> AddAsync(Ad ad);
-        Task<Ad> UpdateAsync(Ad ad);
-        Task<Ad> DeleteAsync(Ad ad);
+        Task<Ad> GetAsync(AdId id, CancellationToken cancellationToken);
+        IQueryable<Ad> GetAllAsync(CancellationToken cancellationToken);
+        Task AddAsync(Ad ad, CancellationToken cancellationToken);
+        Task UpdateAsync(Ad ad, CancellationToken cancellationToken);
+        Task DeleteAsync(Ad ad, CancellationToken cancellationToken);
+        Task SaveAsync(CancellationToken cancellationToken);
     }
 }

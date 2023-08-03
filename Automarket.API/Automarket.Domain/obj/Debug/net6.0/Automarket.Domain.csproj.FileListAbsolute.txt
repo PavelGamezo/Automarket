@@ -1,0 +1,17 @@
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\bin\Debug\net6.0\Automarket.Domain.deps.json
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\bin\Debug\net6.0\Automarket.Domain.dll
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\bin\Debug\net6.0\Automarket.Domain.pdb
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\bin\Debug\net6.0\Automarket.Shared.Abstractions.dll
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\bin\Debug\net6.0\Automarket.Shared.Abstractions.pdb
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\obj\Debug\net6.0\Automarket.Domain.csproj.AssemblyReference.cache
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\obj\Debug\net6.0\Automarket.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\obj\Debug\net6.0\Automarket.Domain.AssemblyInfoInputs.cache
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\obj\Debug\net6.0\Automarket.Domain.AssemblyInfo.cs
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\obj\Debug\net6.0\Automarket.Domain.csproj.CoreCompileInputs.cache
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\obj\Debug\net6.0\Automarket.Domain.csproj.CopyComplete
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\obj\Debug\net6.0\Automarket.Domain.dll
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\obj\Debug\net6.0\refint\Automarket.Domain.dll
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\obj\Debug\net6.0\Automarket.Domain.pdb
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\obj\Debug\net6.0\ref\Automarket.Domain.dll
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\bin\Debug\net6.0\Automarket.Domain.runtimeconfig.json
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Domain\obj\Debug\net6.0\Automarket.Domain.genruntimeconfig.cache

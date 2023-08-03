@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Account\Commands\CreateAccount\" />
+    <Folder Include="Account\Commands\UpdateAccount\" />
+    <Folder Include="Account\Queries\GetAccountById\" />
     <Folder Include="Ad\Events\" />
   </ItemGroup>
 

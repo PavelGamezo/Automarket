@@ -16,6 +16,7 @@ namespace Automarket.Infrastructure
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, string connectionString)
         {
             services.AddScoped<IAdRepository, AdRepository>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
             {

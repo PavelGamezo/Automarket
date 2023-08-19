@@ -17,3 +17,5 @@ D:\Программирование\TeachMeSkills\Проект\AutomarketProject
 D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Infrastructure\obj\Debug\net6.0\ref\Automarket.Infrastructure.dll
 D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Infrastructure\bin\Debug\net6.0\Automarket.Infrastructure.runtimeconfig.json
 D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Infrastructure\obj\Debug\net6.0\Automarket.Infrastructure.genruntimeconfig.cache
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Infrastructure\bin\Debug\net6.0\Automarket.Application.dll
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Infrastructure\bin\Debug\net6.0\Automarket.Application.pdb

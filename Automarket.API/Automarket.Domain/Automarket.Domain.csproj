@@ -17,4 +17,8 @@
     <ProjectReference Include="..\Automarket.Shared.Abstractions\Automarket.Shared.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Account\Events\" />
+  </ItemGroup>
+
 </Project>

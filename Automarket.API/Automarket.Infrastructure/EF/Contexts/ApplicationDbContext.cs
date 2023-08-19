@@ -1,17 +1,14 @@
-﻿using Automarket.Domain.Entities;
+﻿using Automarket.Domain.Account.Entities;
+using Automarket.Domain.AccountAd.Entities;
 using Automarket.Infrastructure.EF.Configurations;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Automarket.Infrastructure.EF.Contexts
 {
     public sealed class ApplicationDbContext : DbContext
     {
         public DbSet<Ad> Ads { get; set; }
+        public DbSet<Account> Accounts { get; set; }
 
         public ApplicationDbContext(DbContextOptions options) : base(options) 
         {
@@ -19,8 +16,11 @@ namespace Automarket.Infrastructure.EF.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            var configuration = new ApplicationDbConfiguration();
-            modelBuilder.ApplyConfiguration<Ad>(configuration);
+            var adConfiguration = new AdDbConfiguration();
+            var accountConfiguration = new AccountDbConfiguration();
+
+            modelBuilder.ApplyConfiguration<Ad>(adConfiguration);
+            modelBuilder.ApplyConfiguration<Account>(accountConfiguration);
 
             base.OnModelCreating(modelBuilder);
         }

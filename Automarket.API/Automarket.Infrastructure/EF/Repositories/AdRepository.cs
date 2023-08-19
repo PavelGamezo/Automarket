@@ -1,13 +1,8 @@
-﻿using Automarket.Domain.Entities;
-using Automarket.Domain.Repositories;
-using Automarket.Domain.ValueObjects;
+﻿using Automarket.Domain.AccountAd.Entities;
+using Automarket.Domain.AccountAd.ValueObjects;
+using Automarket.Domain.Common.Repositories;
 using Automarket.Infrastructure.EF.Contexts;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Automarket.Infrastructure.EF.Repositories
 {

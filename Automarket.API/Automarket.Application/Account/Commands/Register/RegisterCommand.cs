@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Automarket.Application.Common.Commands;
+using Automarket.Shared.Abstractions.ResultObjects;
 
 namespace Automarket.Application.Authentication.Commands.Register
 {
-    internal class RegisterCommand
-    {
-    }
+    public record RegisterCommand(string Login, string Password, string FullName, string Email) : ICommand<Result>;
 }

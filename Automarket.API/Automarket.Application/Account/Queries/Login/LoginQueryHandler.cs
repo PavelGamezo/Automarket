@@ -1,16 +1,11 @@
 ﻿using Automarket.Application.Common.Authentications;
-using Automarket.Application.Common.Exceptions;
 using Automarket.Application.Common.Queries;
 using Automarket.Domain.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Automarket.Shared.Abstractions.ResultObjects;
 
 namespace Automarket.Application.Authentication.Queries.Login
 {
-    public class LoginQueryHandler : IQueryHandler<LoginQuery, string>
+    public class LoginQueryHandler : IQueryHandler<LoginQuery, Result<string>>
     {
         private readonly IAccountRepository _accountRepository;
         private readonly IJwtTokenGenerator _jwtTokenGenerator;
@@ -23,17 +18,29 @@ namespace Automarket.Application.Authentication.Queries.Login
             _jwtTokenGenerator = jwtTokenGenerator;
         }
 
-        public async Task<string> Handle(LoginQuery request, CancellationToken cancellationToken)
+        public async Task<Result<string>> Handle(LoginQuery request, CancellationToken cancellationToken)
         {
+            var validator = new LoginQueryValidator();
+            var validatorResult = validator.Validate(request);
+
+            if (validatorResult.IsValid == false)
+            {
+                return Result.Fail<string>(new Error(
+                    "LoginQueryValidator.",
+                    "Validation of login request is not correct"));
+            }
+
             var account = await _accountRepository.GetByEmailAsync(request.Email, cancellationToken);
             if (account is null)
             {
-                throw new AccountNotFoundException();
+                return Result.Fail<string>(new Error(
+                    "LoginQueryValidator.",
+                    "Can't get account by input email"));
             }
 
             var generatedToken = _jwtTokenGenerator.GenerateToken(account);
 
-            return generatedToken;
+            return Result.Success<string>(generatedToken);
         }
     }
 }

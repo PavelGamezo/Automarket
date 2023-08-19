@@ -1,9 +1,4 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Automarket.Application.Common.Commands
 {
@@ -14,6 +9,5 @@ namespace Automarket.Application.Common.Commands
 
     public interface ICommand<out TResult> : IRequest<TResult>
     {
-        Guid Id { get; }
     }
 }

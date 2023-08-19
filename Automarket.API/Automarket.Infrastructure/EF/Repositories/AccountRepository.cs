@@ -1,43 +1,58 @@
-﻿using Automarket.Domain.Entities;
+﻿using Automarket.Domain.Account.Entities;
 using Automarket.Domain.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Automarket.Infrastructure.EF.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace Automarket.Infrastructure.EF.Repositories
 {
     public class AccountRepository : IAccountRepository
     {
-        public Task AddAsync(Account account, CancellationToken cancellationToken)
+        private readonly DbSet<Account> _accounts;
+        private readonly ApplicationDbContext _applicationDbContext;
+
+        public AccountRepository(ApplicationDbContext applicationDbContext)
         {
-            throw new NotImplementedException();
+            _applicationDbContext = applicationDbContext;
+            _accounts = applicationDbContext.Accounts;
         }
 
-        public Task DeleteAsync(Account account, CancellationToken cancellationToken)
+        public async Task AddAsync(Account account, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            await _accounts.AddAsync(account, cancellationToken);
+            await SaveAsync(cancellationToken);
         }
 
-        public Task<Account> GetByEmailAsync(string email, CancellationToken cancellationToken)
+        public async Task DeleteAsync(Account account, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            _accounts.Remove(account);
+            await SaveAsync(cancellationToken);
         }
 
-        public Task<Account> GetByIdAsync(Guid id, CancellationToken cancellationToken)
+        public async Task<Account> GetByEmailAsync(string email, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var account =  await _accounts
+                .Include(a=>a.Ads)
+                .SingleOrDefaultAsync(
+                    account => account.Email == email, 
+                    cancellationToken);
+
+            return account;
         }
 
-        public Task SaveAsync(CancellationToken cancellationToken)
+        public async Task<Account> GetByIdAsync(Guid id, CancellationToken cancellationToken)
+            =>  await _accounts.Include(a=>a.Ads).SingleOrDefaultAsync(
+                account => account.Id == id, 
+                cancellationToken);
+
+        public async Task SaveAsync(CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            await _applicationDbContext.SaveChangesAsync(cancellationToken);
         }
 
-        public Task UpdateAsync(Account account, CancellationToken cancellationToken)
+        public async Task UpdateAsync(Account account, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            _accounts.Update(account);
+            await SaveAsync(cancellationToken);
         }
     }
 }

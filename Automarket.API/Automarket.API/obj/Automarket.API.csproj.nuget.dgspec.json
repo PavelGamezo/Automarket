@@ -37,6 +37,9 @@
               },
               "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket.API\\Automarket.Infrastructure\\Automarket.Infrastructure.csproj": {
                 "projectPath": "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket.API\\Automarket.Infrastructure\\Automarket.Infrastructure.csproj"
+              },
+              "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket.API\\Automarket.Shared.Abstractions\\Automarket.Shared.Abstractions.csproj": {
+                "projectPath": "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket.API\\Automarket.Shared.Abstractions\\Automarket.Shared.Abstractions.csproj"
               }
             }
           }
@@ -283,6 +286,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket.API\\Automarket.Application\\Automarket.Application.csproj": {
+                "projectPath": "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket.API\\Automarket.Application\\Automarket.Application.csproj"
+              },
               "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket.API\\Automarket.Domain\\Automarket.Domain.csproj": {
                 "projectPath": "D:\\Программирование\\TeachMeSkills\\Проект\\AutomarketProject\\Automarket\\Automarket.API\\Automarket.Domain\\Automarket.Domain.csproj"
               }
@@ -299,6 +305,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.1, )"

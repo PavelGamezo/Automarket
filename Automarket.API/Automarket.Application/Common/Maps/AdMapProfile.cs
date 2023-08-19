@@ -1,13 +1,4 @@
-﻿using AutoMapper;
-using Automarket.Application.DTOs;
-using Automarket.Domain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Automarket.Application.Common.Maps
+﻿namespace Automarket.Application.Common.Maps
 {
     /*
     public class AdMapProfile : Profile

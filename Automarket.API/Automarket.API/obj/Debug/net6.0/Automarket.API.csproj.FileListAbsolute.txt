@@ -74,3 +74,4 @@ D:\Программирование\TeachMeSkills\Проект\AutomarketProject
 D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.API\bin\Debug\net6.0\Automarket.Shared.Abstractions.pdb
 D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.API\bin\Debug\net6.0\AutoMapper.dll
 D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

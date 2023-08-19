@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Automarket.Application\Automarket.Application.csproj" />
     <ProjectReference Include="..\Automarket.Infrastructure\Automarket.Infrastructure.csproj" />
+    <ProjectReference Include="..\Automarket.Shared.Abstractions\Automarket.Shared.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

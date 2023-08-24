@@ -2,7 +2,6 @@
 using Automarket.Domain.Account.ValueObjects;
 using Automarket.Domain.AccountAd.Entities;
 using Automarket.Domain.AccountAd.ValueObjects;
-using Automarket.Shared.Abstractions.Domain;
 using Automarket.Shared.Abstractions.ResultObjects;
 using System;
 using System.Collections.Generic;
@@ -49,6 +48,7 @@ namespace Automarket.Domain.Account.Entities
                 PlaceAccountAd(ad);
             }
 
+
             return Result.Success();
         }
 
@@ -71,8 +71,9 @@ namespace Automarket.Domain.Account.Entities
             {
                 return Result.Fail<Ad>(DomainErrors.Account.RemoveAd);
             }
-
             Ads.Remove(ad);
+
+            this.AddDomainEvent()
 
             return ad;
         }

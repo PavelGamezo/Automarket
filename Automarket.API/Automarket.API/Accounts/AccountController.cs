@@ -52,10 +52,12 @@ namespace Automarket.API.Accounts
 
         [HttpDelete]
         public async Task<IActionResult> DeleteAccount(
-            DeleteAccountCommand request,
+            [FromRoute]Guid accountId,
             CancellationToken cancellationToken)
         {
-            var result = await _mediator.Send(request, cancellationToken);
+            var result = await _mediator.Send(
+                new DeleteAccountCommand(accountId),
+                cancellationToken);
 
             if (result.IsFailure)
             {

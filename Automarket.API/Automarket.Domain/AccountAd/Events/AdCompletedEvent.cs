@@ -1,5 +1,4 @@
 ﻿using Automarket.Domain.AccountAd.Entities;
-using Automarket.Shared.Abstractions.Domain;
 
 namespace Automarket.Domain.AccountAd.Events
 {

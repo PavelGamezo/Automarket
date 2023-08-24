@@ -1,6 +1,7 @@
 ﻿using Automarket.API.AccountAds;
 using Automarket.Application.Ad.Commands.CreateAd;
 using Automarket.Application.Ad.Commands.DeleteAd;
+using Automarket.Application.Ad.Commands.UpdateAd;
 using Automarket.Application.Ad.Queries.GetAds;
 using Automarket.Application.DTOs;
 using Automarket.Shared.Abstractions.ResultObjects;
@@ -52,14 +53,9 @@ namespace Automarket.API.Ads
         public async Task<IActionResult> GetAdDetail(
             [FromRoute] Guid adId)
         {
-            Result<List<AdDto>> adResult = await _mediator.Send(new GetAdDetailsQuery(adId));
+            Result<List<AdDto>> result = await _mediator.Send(new GetAdDetailsQuery(adId));
 
-            if (adResult.IsFailure)
-            {
-                return BadRequest(adResult);
-            }
-
-            return Ok(adResult.Value);
+            return result.IsSuccess ? Ok(result.Value) : BadRequest(result);
         }
 
         /// <summary>
@@ -104,12 +100,23 @@ namespace Automarket.API.Ads
             [FromRoute]Guid adId)
         {
             var result = await _mediator.Send(new RemoveAccountAdCommand(accountId, adId));
-            if (result.IsFailure)
-            {
-                return BadRequest(result);
-            }
+            
+            return result.IsSuccess ? Ok() : NotFound(result.Error);
+        }
 
-            return Ok(result);
+        public async Task<IActionResult> UpdateAccountAd(
+            [FromRoute] Guid accountId,
+            [FromRoute] Guid adId,
+            [FromBody] AccountAdRequest request)
+        {
+            var result = await _mediator.Send(new UpdateAccountAdCommand(accountId, 
+                adId, 
+                request.Brand, 
+                request.Model, 
+                request.CarBody, 
+                request.Year));
+
+            return result.IsSuccess? Ok(result.Value) : NotFound(result.Error);
         }
     }
 }

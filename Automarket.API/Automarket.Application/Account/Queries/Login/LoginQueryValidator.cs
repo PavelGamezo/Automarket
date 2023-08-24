@@ -9,7 +9,7 @@ namespace Automarket.Application.Authentication.Queries.Login
             RuleFor(q => q.Login)
                 .NotEmpty()
                 .WithMessage(q => $"{q.Login} is required")
-                .MaximumLength(100).WithMessage("login must not exceed 100 characters."); ;
+                .MaximumLength(100).WithMessage("login must not exceed 100 characters.");
 
             RuleFor(q => q.FullName)
                 .NotEmpty().WithMessage(q => $"{q.FullName} is required.")

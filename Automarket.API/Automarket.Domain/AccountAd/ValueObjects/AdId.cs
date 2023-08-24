@@ -1,5 +1,4 @@
 ﻿using Automarket.Domain.AccountAd.Exceptions;
-using Automarket.Shared.Abstractions.Domain;
 
 namespace Automarket.Domain.AccountAd.ValueObjects
 {

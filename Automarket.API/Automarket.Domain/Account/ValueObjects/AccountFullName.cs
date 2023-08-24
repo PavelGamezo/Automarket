@@ -1,11 +1,4 @@
-﻿using Automarket.Shared.Abstractions.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Automarket.Domain.Account.ValueObjects
+﻿namespace Automarket.Domain.Account.ValueObjects
 {
     public record AccountFullName(string Name, string Surname)
     {

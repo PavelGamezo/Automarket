@@ -1,6 +1,5 @@
 ﻿using Automarket.Domain.AccountAd.Events;
 using Automarket.Domain.AccountAd.ValueObjects;
-using Automarket.Shared.Abstractions.Domain;
 using Automarket.Shared.Abstractions.ResultObjects;
 
 namespace Automarket.Domain.AccountAd.Entities

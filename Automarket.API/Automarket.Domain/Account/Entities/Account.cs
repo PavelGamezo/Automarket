@@ -1,7 +1,9 @@
 ﻿using Automarket.Domain.Account.Errors;
 using Automarket.Domain.Account.ValueObjects;
 using Automarket.Domain.AccountAd.Entities;
+using Automarket.Domain.AccountAd.Events;
 using Automarket.Domain.AccountAd.ValueObjects;
+using Automarket.Domain.Common.Domain;
 using Automarket.Shared.Abstractions.ResultObjects;
 using System;
 using System.Collections.Generic;
@@ -11,13 +13,13 @@ using System.Threading.Tasks;
 
 namespace Automarket.Domain.Account.Entities
 {
-    public class Account : Entity
+    public class Account : AggregateRoot
     {
-        public Login Login { get; set; }
-        public AccountFullName FullName { get; set; }
-        public Password Password { get; set; }
-        public string Email { get; set; }
-        public List<Ad> Ads { get; set; }
+        public Login Login { get; private set; }
+        public AccountFullName FullName { get; private set; }
+        public Password Password { get; private set; }
+        public string Email { get; private set; }
+        public List<Ad> Ads { get; private set; }
 
         public Account(Guid id, Login login, AccountFullName fullName, Password password, string email) : base(id)
         {
@@ -37,22 +39,12 @@ namespace Automarket.Domain.Account.Entities
             }
 
             Ads.Add(ad);
+            AddDomainEvent(new AdPlacedDomainEvent(ad));
 
             return Result.Success();
         }
 
-        public Result AddAds(IEnumerable<Ad> ads)
-        {
-            foreach (var ad in ads)
-            {
-                PlaceAccountAd(ad);
-            }
-
-
-            return Result.Success();
-        }
-
-        public Result<Ad> GetAdById(Guid adId)
+        public Result<Ad> GetAdById(AdId adId)
         {
             var ad = Ads.FirstOrDefault(a => a.Id == adId);
 
@@ -64,6 +56,21 @@ namespace Automarket.Domain.Account.Entities
             return Result.Success(ad);
         }
 
+        public Result ChangeAd(AdId adId, 
+            CarBrand brand,
+            CarModel model,
+            CarBody carBody,
+            CarYear year)
+        {
+            var ad = Ads.Single(a => a.Id == adId);
+            if (ad is null)
+            {
+                return Result.Fail<Ad>(DomainErrors.Account.FindAd);
+            }
+
+            return ad.Change(brand, model, carBody, year);
+        }
+
         public Result<Ad> RemoveAd(Guid adId)
         {
             var ad = Ads.FirstOrDefault(a => a.Id == adId);
@@ -73,7 +80,7 @@ namespace Automarket.Domain.Account.Entities
             }
             Ads.Remove(ad);
 
-            this.AddDomainEvent()
+            AddDomainEvent(new AdRemovedDomainEvent(ad));
 
             return ad;
         }

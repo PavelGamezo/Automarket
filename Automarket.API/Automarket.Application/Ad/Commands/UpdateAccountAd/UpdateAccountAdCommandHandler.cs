@@ -44,7 +44,9 @@ namespace Automarket.Application.Ad.Commands.UpdateAd
                     "Can't get ad from this account"));
             }
 
-            await _adRepository.UpdateAsync(adResult.Value, cancellationToken);
+            account.ChangeAd(request.AdId, request.Brand, request.Model, request.CarBody, request.Year);
+
+            await _accountRepository.SaveAsync(cancellationToken);
 
             return Result.Success(adResult.Value.Id);
         }

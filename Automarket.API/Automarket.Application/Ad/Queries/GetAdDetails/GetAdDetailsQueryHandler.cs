@@ -16,7 +16,7 @@ namespace Automarket.Application.Ad.Queries.GetAds
 
         public async Task<Result<List<AdDto>>> Handle(GetAdDetailsQuery request, CancellationToken cancellationToken)
         {
-            var ads = _adRepository.GetAllAsync(cancellationToken);
+            var ads = _adRepository.GetAll(cancellationToken);
 
             if (ads is null)
             {

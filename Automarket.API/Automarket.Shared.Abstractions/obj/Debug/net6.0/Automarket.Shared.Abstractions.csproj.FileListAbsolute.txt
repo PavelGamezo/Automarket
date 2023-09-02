@@ -1,7 +1,6 @@
 D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Shared.Abstractions\bin\Debug\net6.0\Automarket.Shared.Abstractions.deps.json
 D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Shared.Abstractions\bin\Debug\net6.0\Automarket.Shared.Abstractions.dll
 D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Shared.Abstractions\bin\Debug\net6.0\Automarket.Shared.Abstractions.pdb
-D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Shared.Abstractions\obj\Debug\net6.0\Automarket.Shared.Abstractions.csproj.AssemblyReference.cache
 D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Shared.Abstractions\obj\Debug\net6.0\Automarket.Shared.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
 D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Shared.Abstractions\obj\Debug\net6.0\Automarket.Shared.Abstractions.AssemblyInfoInputs.cache
 D:\Программирование\TeachMeSkills\Проект\AutomarketProject\Automarket\Automarket.API\Automarket.Shared.Abstractions\obj\Debug\net6.0\Automarket.Shared.Abstractions.AssemblyInfo.cs

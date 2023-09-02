@@ -104,6 +104,9 @@ namespace Automarket.API.Ads
             return result.IsSuccess ? Ok() : NotFound(result.Error);
         }
 
+        [Route("{accountId}/ads/{adId}")]
+        [HttpPut]
+        [Authorize]
         public async Task<IActionResult> UpdateAccountAd(
             [FromRoute] Guid accountId,
             [FromRoute] Guid adId,

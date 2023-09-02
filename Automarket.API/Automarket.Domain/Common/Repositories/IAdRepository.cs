@@ -11,7 +11,7 @@ namespace Automarket.Domain.Common.Repositories
     public interface IAdRepository
     {
         Task<Ad> GetAsync(AdId id, CancellationToken cancellationToken);
-        IQueryable<Ad> GetAllAsync(CancellationToken cancellationToken);
+        IQueryable<Ad> GetAll(CancellationToken cancellationToken);
         Task AddAsync(Ad ad, CancellationToken cancellationToken);
         Task UpdateAsync(Ad ad, CancellationToken cancellationToken);
         Task DeleteAsync(Ad ad, CancellationToken cancellationToken);

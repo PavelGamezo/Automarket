@@ -32,7 +32,7 @@ namespace Automarket.Infrastructure.EF.Repositories
         public async Task<Ad> GetAsync(AdId id, CancellationToken cancellationToken)
             => await _ads.SingleOrDefaultAsync(ad => ad.Id == id, cancellationToken);
 
-        public IQueryable<Ad> GetAllAsync(CancellationToken cancellationToken)
+        public IQueryable<Ad> GetAll(CancellationToken cancellationToken)
             => _ads.AsQueryable();
 
         public async Task SaveAsync(CancellationToken cancellationToken)

@@ -36,6 +36,8 @@ namespace Automarket.Domain.AccountAd.Entities
             Year = year;
             Account = account;
             AccountId = account.Id;
+
+            AddDomainEvent(new AdCreatedDomainEvent(this));
         }
 
         public Ad(Guid id, CarBrand brand, CarModel model, CarBody carBody, CarYear year) : base(id)
@@ -54,7 +56,25 @@ namespace Automarket.Domain.AccountAd.Entities
             CarBody carBody,
             CarYear year)
         {
-            return Result.Success(new Ad(id, brand, model, carBody, year, account));
+            var ad = new Ad(id, brand, model, carBody, year, account);
+
+            return ad;
+        }
+
+        public Result Change(
+            CarBrand brand,
+            CarModel model,
+            CarBody carBody,
+            CarYear year)
+        {
+            Brand = brand;
+            Model = model;
+            CarBody = carBody;
+            Year = year;
+
+            AddDomainEvent(new AdChangedDomainEvent(this));
+
+            return Result.Success();
         }
     }
 }
